@@ -167,11 +167,7 @@ void main() {
       expect(
         () => vault.store('', 'value'),
         throwsA(
-          isA<PlatformException>().having(
-            (e) => e.code,
-            'code',
-            'INVALID_KEY',
-          ),
+          isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_KEY'),
         ),
       );
     });

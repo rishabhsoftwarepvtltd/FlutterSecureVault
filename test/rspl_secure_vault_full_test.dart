@@ -61,7 +61,8 @@ void setupMockChannels() {
       }
 
       if (_canaryDecryptResult != null) {
-        return codec.encodeMessage([DecryptResponse(plainText: _canaryDecryptResult)]);
+        return codec
+            .encodeMessage([DecryptResponse(plainText: _canaryDecryptResult)]);
       }
 
       final decoded = codec.decodeMessage(message);
@@ -180,7 +181,8 @@ void main() {
       test('initialize called twice returns immediately', () async {
         final vault = RsplSecureVault();
         await vault.initialize(bundleId: 'com.test');
-        await vault.initialize(bundleId: 'com.test'); // Should return immediately
+        await vault.initialize(
+            bundleId: 'com.test'); // Should return immediately
         expect(vault.isInitialized, isTrue);
       });
 
@@ -287,7 +289,8 @@ void main() {
         await expectLater(
           vault.store('', 'value'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_KEY'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'INVALID_KEY'),
           ),
         );
       });
@@ -298,7 +301,8 @@ void main() {
         await expectLater(
           vault.store('key', ''),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_VALUE'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'INVALID_VALUE'),
           ),
         );
       });
@@ -308,7 +312,8 @@ void main() {
         await expectLater(
           vault.store('key', 'value'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'UNINITIALIZED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'UNINITIALIZED'),
           ),
         );
       });
@@ -330,7 +335,8 @@ void main() {
         await expectLater(
           vault.store('key', 'value'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'ENCRYPTION_FAILED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'ENCRYPTION_FAILED'),
           ),
         );
       });
@@ -369,7 +375,8 @@ void main() {
         await expectLater(
           vault.retrieve(''),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_KEY'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'INVALID_KEY'),
           ),
         );
       });
@@ -379,7 +386,8 @@ void main() {
         await expectLater(
           vault.retrieve('key'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'UNINITIALIZED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'UNINITIALIZED'),
           ),
         );
       });
@@ -409,7 +417,8 @@ void main() {
         await expectLater(
           vault.remove(''),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_KEY'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'INVALID_KEY'),
           ),
         );
       });
@@ -419,7 +428,8 @@ void main() {
         await expectLater(
           vault.remove('key'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'UNINITIALIZED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'UNINITIALIZED'),
           ),
         );
       });
@@ -443,7 +453,8 @@ void main() {
         await expectLater(
           vault.clear(),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'UNINITIALIZED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'UNINITIALIZED'),
           ),
         );
       });
@@ -472,7 +483,8 @@ void main() {
         await expectLater(
           vault.containsKey(''),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'INVALID_KEY'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'INVALID_KEY'),
           ),
         );
       });
@@ -482,7 +494,8 @@ void main() {
         await expectLater(
           vault.containsKey('key'),
           throwsA(
-            isA<PlatformException>().having((e) => e.code, 'code', 'UNINITIALIZED'),
+            isA<PlatformException>()
+                .having((e) => e.code, 'code', 'UNINITIALIZED'),
           ),
         );
       });

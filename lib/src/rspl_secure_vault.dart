@@ -245,7 +245,8 @@ class RsplSecureVault {
       // Log the error but don't fail initialization
       // User can still use the vault, just won't detect future key mismatches
       if (kDebugMode) {
-        debugPrint('⚠️ [RsplSecureVault] Failed to store validation canary: $e');
+        debugPrint(
+            '⚠️ [RsplSecureVault] Failed to store validation canary: $e');
       }
       // Note: Initialization proceeds without canary
       // Next launch will think it's a fresh install and store a new canary
@@ -438,4 +439,3 @@ class RsplSecureVault {
     return await _storage.containsKey(key: key);
   }
 }
-

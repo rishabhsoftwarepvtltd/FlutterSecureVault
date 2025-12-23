@@ -27,7 +27,8 @@ class MockPlatformChannels {
   void setFailDecrypt(bool value) => _shouldFailDecrypt = value;
   void setReturnNullEncrypt(bool value) => _shouldReturnNullEncrypt = value;
   void setReturnNullDecrypt(bool value) => _shouldReturnNullDecrypt = value;
-  void setReturnConnectionError(bool value) => _shouldReturnConnectionError = value;
+  void setReturnConnectionError(bool value) =>
+      _shouldReturnConnectionError = value;
 
   void setupMockChannels() {
     // Get the binding
@@ -283,7 +284,8 @@ void main() {
 
     test('decrypt succeeds', () async {
       final api = RsplSecureVaultApi();
-      final response = await api.decrypt(DecryptRequest(cipherText: 'encrypted:secret'));
+      final response =
+          await api.decrypt(DecryptRequest(cipherText: 'encrypted:secret'));
       expect(response.plainText, 'secret');
     });
 
@@ -506,4 +508,3 @@ void main() {
     });
   });
 }
-

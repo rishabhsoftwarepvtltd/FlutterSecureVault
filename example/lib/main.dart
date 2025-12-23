@@ -53,7 +53,10 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   void _log(String message) {
     debugPrint(message);
     setState(() {
-      _logs.insert(0, '${DateTime.now().toString().substring(11, 19)} - $message');
+      _logs.insert(
+        0,
+        '${DateTime.now().toString().substring(11, 19)} - $message',
+      );
       if (_logs.length > 10) _logs.removeLast();
     });
   }
@@ -167,7 +170,10 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RSPL Secure Vault', style: TextStyle(fontWeight: FontWeight.w600)),
+        title: const Text(
+          'RSPL Secure Vault',
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
         centerTitle: true,
         elevation: 0,
       ),
@@ -278,7 +284,9 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
               decoration: InputDecoration(
                 labelText: 'Key',
                 hintText: 'e.g., api_token, user_secret',
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 prefixIcon: const Icon(Icons.key),
               ),
             ),
@@ -288,7 +296,9 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
               decoration: InputDecoration(
                 labelText: 'Value',
                 hintText: 'The secret value to store',
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 prefixIcon: const Icon(Icons.lock),
               ),
               obscureText: true,
@@ -311,7 +321,10 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Actions', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+            const Text(
+              'Actions',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
             const SizedBox(height: 16),
             Row(
               children: [
@@ -348,7 +361,9 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
                     onPressed: _clearAll,
                     icon: const Icon(Icons.clear_all),
                     label: const Text('Clear All'),
-                    style: OutlinedButton.styleFrom(foregroundColor: Colors.red.shade600),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.red.shade600,
+                    ),
                   ),
                 ),
               ],
@@ -362,9 +377,10 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   Widget _buildResultCard() {
     return Card(
       elevation: 0,
-      color: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.3),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12),
-      ),
+      color: Theme.of(
+        context,
+      ).colorScheme.primaryContainer.withValues(alpha: 0.3),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -372,7 +388,11 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
           children: [
             Row(
               children: [
-                Icon(Icons.visibility, size: 20, color: Theme.of(context).colorScheme.primary),
+                Icon(
+                  Icons.visibility,
+                  size: 20,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
                 const SizedBox(width: 8),
                 const Text(
                   'Retrieved Value',
@@ -420,8 +440,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
                 const SizedBox(width: 8),
                 const Text(
                   'Activity Log',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
