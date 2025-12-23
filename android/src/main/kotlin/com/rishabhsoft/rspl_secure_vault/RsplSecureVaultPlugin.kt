@@ -1,7 +1,7 @@
-package com.rspl.secure_vault.rspl_secure_vault
+package com.rishabhsoft.rspl_secure_vault
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
-import com.rspl.secure_vault.rspl_secure_vault.RsplSecureVaultApi
+import com.rishabhsoft.rspl_secure_vault.RsplSecureVaultApi
 
 /** RsplSecureVaultPlugin */
 class RsplSecureVaultPlugin :

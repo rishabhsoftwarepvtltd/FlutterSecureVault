@@ -63,7 +63,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
 
   Future<void> _initializeVault() async {
     try {
-      await _vault.initialize(bundleId: 'com.rspl.securevault.rsplSecureVaultExample');
+      await _vault.initialize(bundleId: 'com.rishabhsoft.rspl_secure_vault');
 
       if (mounted) {
         setState(() {

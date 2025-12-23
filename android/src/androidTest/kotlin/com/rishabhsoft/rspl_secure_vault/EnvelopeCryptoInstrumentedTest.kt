@@ -20,7 +20,7 @@ import java.security.KeyStore
 class EnvelopeCryptoInstrumentedTest {
 
     private lateinit var context: Context
-    private val testKeyAlias = "com.rspl.secure_vault.test"
+    private val testKeyAlias = "com.rishabhsoft.rspl_secure_vault.test"
 
     @Before
     fun setUp() {

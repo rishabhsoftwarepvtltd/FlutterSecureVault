@@ -37,7 +37,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.rspl.secure_vault.rspl_secure_vault
+        package: com.rishabhsoft.rspl_secure_vault
         pluginClass: RsplSecureVaultPlugin
       ios:
         pluginClass: RsplSecureVaultPlugin

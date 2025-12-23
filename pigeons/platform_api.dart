@@ -23,12 +23,12 @@ class DecryptResponse {
 @ConfigurePigeon(
   PigeonOptions(
     kotlinOut:
-        'android/src/main/kotlin/com/rspl/secure_vault/rspl_secure_vault/RsplSecureVaultApi.kt',
+        'android/src/main/kotlin/com/rishabhsoft/rspl_secure_vault/RsplSecureVaultApi.kt',
     swiftOut: 'ios/Classes/RsplSecureVaultApi.swift',
     dartOut: 'lib/src/common_platform/rspl_secure_vault_api.dart',
     kotlinOptions: KotlinOptions(
       errorClassName: 'RsplSecureVaultAndroidError',
-      package: 'com.rspl.secure_vault.rspl_secure_vault',
+      package: 'com.rishabhsoft.rspl_secure_vault',
       includeErrorClass: true,
     ),
     swiftOptions: SwiftOptions(errorClassName: 'RsplSecureVaultIOSError'),

@@ -2,7 +2,7 @@
 // See also: https://pub.dev/packages/pigeon
 @file:Suppress("UNCHECKED_CAST", "ArrayInDataClass")
 
-package com.rspl.secure_vault.rspl_secure_vault
+package com.rishabhsoft.rspl_secure_vault
 
 import android.util.Log
 import io.flutter.plugin.common.BasicMessageChannel

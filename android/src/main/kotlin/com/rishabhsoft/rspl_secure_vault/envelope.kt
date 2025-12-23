@@ -1,4 +1,4 @@
-package com.rspl.secure_vault.rspl_secure_vault
+package com.rishabhsoft.rspl_secure_vault
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,4 +1,4 @@
-package com.rspl.secure_vault.rspl_secure_vault_example
+package com.rishabhsoft.rspl_secure_vault
 
 import io.flutter.embedding.android.FlutterActivity
 

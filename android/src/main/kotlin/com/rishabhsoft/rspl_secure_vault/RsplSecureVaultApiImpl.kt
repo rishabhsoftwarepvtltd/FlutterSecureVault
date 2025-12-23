@@ -1,12 +1,12 @@
-package com.rspl.secure_vault.rspl_secure_vault
+package com.rishabhsoft.rspl_secure_vault
 
-import com.rspl.secure_vault.rspl_secure_vault.RsplSecureVaultApi
-import com.rspl.secure_vault.rspl_secure_vault.InitRequest
-import com.rspl.secure_vault.rspl_secure_vault.EncryptRequest
-import com.rspl.secure_vault.rspl_secure_vault.DecryptRequest
-import com.rspl.secure_vault.rspl_secure_vault.EncryptResponse
-import com.rspl.secure_vault.rspl_secure_vault.DecryptResponse
-import com.rspl.secure_vault.rspl_secure_vault.RsplSecureVaultAndroidError
+import com.rishabhsoft.rspl_secure_vault.RsplSecureVaultApi
+import com.rishabhsoft.rspl_secure_vault.InitRequest
+import com.rishabhsoft.rspl_secure_vault.EncryptRequest
+import com.rishabhsoft.rspl_secure_vault.DecryptRequest
+import com.rishabhsoft.rspl_secure_vault.EncryptResponse
+import com.rishabhsoft.rspl_secure_vault.DecryptResponse
+import com.rishabhsoft.rspl_secure_vault.RsplSecureVaultAndroidError
 import android.content.Context
 
 class RsplSecureVaultApiImpl 
