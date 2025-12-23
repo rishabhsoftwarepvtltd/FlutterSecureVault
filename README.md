@@ -1,8 +1,8 @@
-# RSPL Secure Vault
+# Secure Vault
 
 [![pub package](https://img.shields.io/pub/v/rspl_secure_vault.svg)](https://pub.dev/packages/rspl_secure_vault) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Flutter](https://img.shields.io/badge/Flutter-3.3.0%2B-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev) [![Dart](https://img.shields.io/badge/Dart-3.0.0%2B-0175C2.svg?logo=dart&logoColor=white)](https://dart.dev) [![Platform](https://img.shields.io/badge/platform-android%20|%20ios-blue.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Security Audit](https://img.shields.io/badge/Security%20Audit-Passed-brightgreen.svg)](SECURITY_AUDIT.md)
 
-`RSPLSecureVault` is a **secure-by-default** Flutter plugin for storing sensitive data. It provides automatic encryption using envelope encryption with platform-specific hardware-backed key management (iOS Secure Enclave/Keychain and Android Keystore).
+This is a **secure-by-default** Flutter plugin for storing sensitive data. It provides automatic encryption using envelope encryption with platform-specific hardware-backed key management (iOS Secure Enclave/Keychain and Android Keystore).
 
 > **⚠️ Security Notice**: While this package implements industry-standard encryption (AES-256-GCM), always conduct independent security audits for production applications handling sensitive data. See [Important Notes for Production Use](#important-notes-for-production-use) for details.
 
@@ -391,10 +391,10 @@ try {
 │           store / retrieve / remove / clear             │
 ├─────────────────────────────────────────────────────────┤
 │                Internal Implementation                  │
-│  ┌─────────────────────┐  ┌─────────────────────────┐  │
-│  │  Encryption Layer   │  │  FlutterSecureStorage   │  │
-│  │  (Envelope Crypto)  │  │  (Persistent Storage)   │  │
-│  └─────────────────────┘  └─────────────────────────┘  │
+│  ┌─────────────────────┐  ┌─────────────────────────┐   │
+│  │  Encryption Layer   │  │  FlutterSecureStorage   │   │
+│  │  (Envelope Crypto)  │  │  (Persistent Storage)   │   │
+│  └─────────────────────┘  └─────────────────────────┘   │
 └─────────────────────────┬───────────────────────────────┘
                           │ Platform Channel
 ┌─────────────────────────┴───────────────────────────────┐
@@ -490,7 +490,6 @@ This package follows a **secure-by-default** approach:
 - ❌ **Rooted/Jailbroken devices**: On compromised devices, hardware security guarantees may be bypassed. This package does not detect or block usage on such devices.
 - ❌ **Runtime memory attacks**: Decrypted data exists briefly in memory during retrieval. Memory-scraping malware on a compromised device could potentially access this data.
 - ❌ **App-level compromise**: If your app itself is compromised (e.g., through malicious dependencies or code injection), stored secrets may be exposed.
-- ✅ **Backup/restore handling**: Encrypted data may be included in device backups, but encryption keys are device-bound and do NOT transfer. The vault automatically detects and clears orphaned data on the first launch after a restore (see `clearOnKeyMismatch` parameter).
 - ❌ **Side-channel attacks**: This package does not implement countermeasures against timing attacks or other side-channel vulnerabilities.
 - ❌ **iOS data persistence**: On iOS, Keychain data persists after app uninstall. If your threat model requires data deletion on uninstall, implement additional cleanup logic.
 
@@ -665,10 +664,6 @@ RSPL Secure Vault is designed to help meet common regulatory requirements by pro
 ## FAQ
 
 ### General Questions
-
-**Q: Why use this instead of `flutter_secure_storage` directly?**
-
-A: This package adds envelope encryption (unique key per operation), automatic backup/restore handling, and a simpler API. With `flutter_secure_storage` alone, all data shares the same encryption key - if compromised, all data is exposed.
 
 **Q: Is this package production-ready?**
 
