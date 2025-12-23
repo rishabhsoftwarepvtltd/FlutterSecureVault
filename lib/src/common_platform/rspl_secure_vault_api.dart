@@ -14,20 +14,21 @@ PlatformException _createConnectionError(String channelName) {
     message: 'Unable to establish connection on channel: "$channelName".',
   );
 }
+
 bool _deepEquals(Object? a, Object? b) {
   if (a is List && b is List) {
     return a.length == b.length &&
         a.indexed
-        .every(((int, dynamic) item) => _deepEquals(item.$2, b[item.$1]));
+            .every(((int, dynamic) item) => _deepEquals(item.$2, b[item.$1]));
   }
   if (a is Map && b is Map) {
-    return a.length == b.length && a.entries.every((MapEntry<Object?, Object?> entry) =>
-        (b as Map<Object?, Object?>).containsKey(entry.key) &&
-        _deepEquals(entry.value, b[entry.key]));
+    return a.length == b.length &&
+        a.entries.every((MapEntry<Object?, Object?> entry) =>
+            (b as Map<Object?, Object?>).containsKey(entry.key) &&
+            _deepEquals(entry.value, b[entry.key]));
   }
   return a == b;
 }
-
 
 class InitRequest {
   InitRequest({
@@ -43,7 +44,8 @@ class InitRequest {
   }
 
   Object encode() {
-    return _toList();  }
+    return _toList();
+  }
 
   static InitRequest decode(Object result) {
     result as List<Object?>;
@@ -66,8 +68,7 @@ class InitRequest {
 
   @override
   // ignore: avoid_equals_and_hash_code_on_mutable_classes
-  int get hashCode => Object.hashAll(_toList())
-;
+  int get hashCode => Object.hashAll(_toList());
 }
 
 class EncryptRequest {
@@ -84,7 +85,8 @@ class EncryptRequest {
   }
 
   Object encode() {
-    return _toList();  }
+    return _toList();
+  }
 
   static EncryptRequest decode(Object result) {
     result as List<Object?>;
@@ -107,8 +109,7 @@ class EncryptRequest {
 
   @override
   // ignore: avoid_equals_and_hash_code_on_mutable_classes
-  int get hashCode => Object.hashAll(_toList())
-;
+  int get hashCode => Object.hashAll(_toList());
 }
 
 class DecryptRequest {
@@ -125,7 +126,8 @@ class DecryptRequest {
   }
 
   Object encode() {
-    return _toList();  }
+    return _toList();
+  }
 
   static DecryptRequest decode(Object result) {
     result as List<Object?>;
@@ -148,8 +150,7 @@ class DecryptRequest {
 
   @override
   // ignore: avoid_equals_and_hash_code_on_mutable_classes
-  int get hashCode => Object.hashAll(_toList())
-;
+  int get hashCode => Object.hashAll(_toList());
 }
 
 class EncryptResponse {
@@ -166,7 +167,8 @@ class EncryptResponse {
   }
 
   Object encode() {
-    return _toList();  }
+    return _toList();
+  }
 
   static EncryptResponse decode(Object result) {
     result as List<Object?>;
@@ -189,8 +191,7 @@ class EncryptResponse {
 
   @override
   // ignore: avoid_equals_and_hash_code_on_mutable_classes
-  int get hashCode => Object.hashAll(_toList())
-;
+  int get hashCode => Object.hashAll(_toList());
 }
 
 class DecryptResponse {
@@ -207,7 +208,8 @@ class DecryptResponse {
   }
 
   Object encode() {
-    return _toList();  }
+    return _toList();
+  }
 
   static DecryptResponse decode(Object result) {
     result as List<Object?>;
@@ -230,10 +232,8 @@ class DecryptResponse {
 
   @override
   // ignore: avoid_equals_and_hash_code_on_mutable_classes
-  int get hashCode => Object.hashAll(_toList())
-;
+  int get hashCode => Object.hashAll(_toList());
 }
-
 
 class _PigeonCodec extends StandardMessageCodec {
   const _PigeonCodec();
@@ -242,19 +242,19 @@ class _PigeonCodec extends StandardMessageCodec {
     if (value is int) {
       buffer.putUint8(4);
       buffer.putInt64(value);
-    }    else if (value is InitRequest) {
+    } else if (value is InitRequest) {
       buffer.putUint8(129);
       writeValue(buffer, value.encode());
-    }    else if (value is EncryptRequest) {
+    } else if (value is EncryptRequest) {
       buffer.putUint8(130);
       writeValue(buffer, value.encode());
-    }    else if (value is DecryptRequest) {
+    } else if (value is DecryptRequest) {
       buffer.putUint8(131);
       writeValue(buffer, value.encode());
-    }    else if (value is EncryptResponse) {
+    } else if (value is EncryptResponse) {
       buffer.putUint8(132);
       writeValue(buffer, value.encode());
-    }    else if (value is DecryptResponse) {
+    } else if (value is DecryptResponse) {
       buffer.putUint8(133);
       writeValue(buffer, value.encode());
     } else {
@@ -265,15 +265,15 @@ class _PigeonCodec extends StandardMessageCodec {
   @override
   Object? readValueOfType(int type, ReadBuffer buffer) {
     switch (type) {
-      case 129: 
+      case 129:
         return InitRequest.decode(readValue(buffer)!);
-      case 130: 
+      case 130:
         return EncryptRequest.decode(readValue(buffer)!);
-      case 131: 
+      case 131:
         return DecryptRequest.decode(readValue(buffer)!);
-      case 132: 
+      case 132:
         return EncryptResponse.decode(readValue(buffer)!);
-      case 133: 
+      case 133:
         return DecryptResponse.decode(readValue(buffer)!);
       default:
         return super.readValueOfType(type, buffer);
@@ -285,9 +285,11 @@ class RsplSecureVaultApi {
   /// Constructor for [RsplSecureVaultApi].  The [binaryMessenger] named argument is
   /// available for dependency injection.  If it is left null, the default
   /// BinaryMessenger will be used which routes to the host platform.
-  RsplSecureVaultApi({BinaryMessenger? binaryMessenger, String messageChannelSuffix = ''})
+  RsplSecureVaultApi(
+      {BinaryMessenger? binaryMessenger, String messageChannelSuffix = ''})
       : pigeonVar_binaryMessenger = binaryMessenger,
-        pigeonVar_messageChannelSuffix = messageChannelSuffix.isNotEmpty ? '.$messageChannelSuffix' : '';
+        pigeonVar_messageChannelSuffix =
+            messageChannelSuffix.isNotEmpty ? '.$messageChannelSuffix' : '';
   final BinaryMessenger? pigeonVar_binaryMessenger;
 
   static const MessageCodec<Object?> pigeonChannelCodec = _PigeonCodec();
@@ -295,13 +297,16 @@ class RsplSecureVaultApi {
   final String pigeonVar_messageChannelSuffix;
 
   Future<void> initialize(InitRequest request) async {
-    final String pigeonVar_channelName = 'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.initialize$pigeonVar_messageChannelSuffix';
-    final BasicMessageChannel<Object?> pigeonVar_channel = BasicMessageChannel<Object?>(
+    final String pigeonVar_channelName =
+        'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.initialize$pigeonVar_messageChannelSuffix';
+    final BasicMessageChannel<Object?> pigeonVar_channel =
+        BasicMessageChannel<Object?>(
       pigeonVar_channelName,
       pigeonChannelCodec,
       binaryMessenger: pigeonVar_binaryMessenger,
     );
-    final Future<Object?> pigeonVar_sendFuture = pigeonVar_channel.send(<Object?>[request]);
+    final Future<Object?> pigeonVar_sendFuture =
+        pigeonVar_channel.send(<Object?>[request]);
     final List<Object?>? pigeonVar_replyList =
         await pigeonVar_sendFuture as List<Object?>?;
     if (pigeonVar_replyList == null) {
@@ -318,13 +323,16 @@ class RsplSecureVaultApi {
   }
 
   Future<EncryptResponse> encrypt(EncryptRequest request) async {
-    final String pigeonVar_channelName = 'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.encrypt$pigeonVar_messageChannelSuffix';
-    final BasicMessageChannel<Object?> pigeonVar_channel = BasicMessageChannel<Object?>(
+    final String pigeonVar_channelName =
+        'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.encrypt$pigeonVar_messageChannelSuffix';
+    final BasicMessageChannel<Object?> pigeonVar_channel =
+        BasicMessageChannel<Object?>(
       pigeonVar_channelName,
       pigeonChannelCodec,
       binaryMessenger: pigeonVar_binaryMessenger,
     );
-    final Future<Object?> pigeonVar_sendFuture = pigeonVar_channel.send(<Object?>[request]);
+    final Future<Object?> pigeonVar_sendFuture =
+        pigeonVar_channel.send(<Object?>[request]);
     final List<Object?>? pigeonVar_replyList =
         await pigeonVar_sendFuture as List<Object?>?;
     if (pigeonVar_replyList == null) {
@@ -346,13 +354,16 @@ class RsplSecureVaultApi {
   }
 
   Future<DecryptResponse> decrypt(DecryptRequest request) async {
-    final String pigeonVar_channelName = 'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.decrypt$pigeonVar_messageChannelSuffix';
-    final BasicMessageChannel<Object?> pigeonVar_channel = BasicMessageChannel<Object?>(
+    final String pigeonVar_channelName =
+        'dev.flutter.pigeon.rspl_secure_vault.RsplSecureVaultApi.decrypt$pigeonVar_messageChannelSuffix';
+    final BasicMessageChannel<Object?> pigeonVar_channel =
+        BasicMessageChannel<Object?>(
       pigeonVar_channelName,
       pigeonChannelCodec,
       binaryMessenger: pigeonVar_binaryMessenger,
     );
-    final Future<Object?> pigeonVar_sendFuture = pigeonVar_channel.send(<Object?>[request]);
+    final Future<Object?> pigeonVar_sendFuture =
+        pigeonVar_channel.send(<Object?>[request]);
     final List<Object?>? pigeonVar_replyList =
         await pigeonVar_sendFuture as List<Object?>?;
     if (pigeonVar_replyList == null) {

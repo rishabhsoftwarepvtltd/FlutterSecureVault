@@ -85,7 +85,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   Future<void> _storeValue() async {
     final key = _keyController.text.trim();
     final value = _valueController.text.trim();
-    
+
     if (key.isEmpty || value.isEmpty) {
       _showSnackBar('Please enter both key and value');
       return;
@@ -103,7 +103,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
 
   Future<void> _retrieveValue() async {
     final key = _keyController.text.trim();
-    
+
     if (key.isEmpty) {
       _showSnackBar('Please enter a key');
       return;
@@ -130,7 +130,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
 
   Future<void> _removeValue() async {
     final key = _keyController.text.trim();
-    
+
     if (key.isEmpty) {
       _showSnackBar('Please enter a key');
       return;
