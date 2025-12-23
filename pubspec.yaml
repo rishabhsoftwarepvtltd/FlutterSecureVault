@@ -1,0 +1,43 @@
+name: rspl_secure_vault
+description: >-
+  A secure encryption plugin for Flutter using envelope encryption with 
+  platform-specific key management. Leverages iOS Secure Enclave/Keychain 
+  and Android Keystore for hardware-backed key protection.
+version: 0.0.1
+homepage: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault
+repository: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault
+issue_tracker: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault/issues
+
+topics:
+  - encryption
+  - security
+  - keychain
+  - keystore
+  - cryptography
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^9.2.2
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  build_runner: ^2.4.8
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.4.4
+  pigeon: ^26.0.1
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.rspl.secure_vault.rspl_secure_vault
+        pluginClass: RsplSecureVaultPlugin
+      ios:
+        pluginClass: RsplSecureVaultPlugin
