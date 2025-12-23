@@ -63,7 +63,7 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
 
   Future<void> _initializeVault() async {
     try {
-      await _vault.initialize(bundleId: 'com.example.rspl_secure_vault');
+      await _vault.initialize(bundleId: 'com.rspl.securevault.rsplSecureVaultExample');
 
       if (mounted) {
         setState(() {
@@ -83,14 +83,17 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   }
 
   Future<void> _storeValue() async {
-    if (_keyController.text.isEmpty || _valueController.text.isEmpty) {
+    final key = _keyController.text.trim();
+    final value = _valueController.text.trim();
+    
+    if (key.isEmpty || value.isEmpty) {
       _showSnackBar('Please enter both key and value');
       return;
     }
 
     try {
-      await _vault.store(_keyController.text, _valueController.text);
-      _log('Stored: ${_keyController.text}');
+      await _vault.store(key, value);
+      _log('Stored: $key');
       _showSnackBar('Value stored securely!');
     } on PlatformException catch (e) {
       _log('Store error: ${e.message}');
@@ -99,22 +102,24 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   }
 
   Future<void> _retrieveValue() async {
-    if (_keyController.text.isEmpty) {
+    final key = _keyController.text.trim();
+    
+    if (key.isEmpty) {
       _showSnackBar('Please enter a key');
       return;
     }
 
     try {
-      final value = await _vault.retrieve(_keyController.text);
+      final value = await _vault.retrieve(key);
       setState(() {
         _retrievedValue = value;
       });
 
       if (value != null) {
-        _log('Retrieved: ${_keyController.text}');
+        _log('Retrieved: $key');
         _showSnackBar('Value retrieved!');
       } else {
-        _log('Key not found: ${_keyController.text}');
+        _log('Key not found: $key');
         _showSnackBar('No value found for this key');
       }
     } on PlatformException catch (e) {
@@ -124,17 +129,19 @@ class _SecureVaultDemoState extends State<SecureVaultDemo> {
   }
 
   Future<void> _removeValue() async {
-    if (_keyController.text.isEmpty) {
+    final key = _keyController.text.trim();
+    
+    if (key.isEmpty) {
       _showSnackBar('Please enter a key');
       return;
     }
 
     try {
-      await _vault.remove(_keyController.text);
+      await _vault.remove(key);
       setState(() {
         _retrievedValue = null;
       });
-      _log('Removed: ${_keyController.text}');
+      _log('Removed: $key');
       _showSnackBar('Value removed!');
     } on PlatformException catch (e) {
       _log('Remove error: ${e.message}');
