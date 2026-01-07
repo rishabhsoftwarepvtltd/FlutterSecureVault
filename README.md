@@ -105,7 +105,7 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  rspl_secure_vault: ^0.0.1
+  rspl_secure_vault: ^0.0.2
 ```
 
 Then run:
