@@ -20,7 +20,9 @@ void main() {
 
     setUpAll(() async {
       vault = RsplSecureVault();
-      await vault.initialize(bundleId: 'com.rishabhsoft.rspl_secure_vault.test');
+      await vault.initialize(
+        bundleId: 'com.rishabhsoft.rspl_secure_vault.test',
+      );
     });
 
     testWidgets('vault initializes successfully', (WidgetTester tester) async {
