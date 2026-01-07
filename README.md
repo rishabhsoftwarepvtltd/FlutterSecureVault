@@ -1,6 +1,6 @@
 # Secure Vault
 
-[![pub package](https://img.shields.io/pub/v/rspl_secure_vault.svg)](https://pub.dev/packages/rspl_secure_vault) [![License: Rishabh Software](https://img.shields.io/badge/License-Rishabh%20Software-blue.svg)](LICENSE) [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Flutter](https://img.shields.io/badge/Flutter-3.3.0%2B-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev) [![Dart](https://img.shields.io/badge/Dart-3.0.0%2B-0175C2.svg?logo=dart&logoColor=white)](https://dart.dev) [![Platform](https://img.shields.io/badge/platform-android%20|%20ios-blue.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Security Audit](https://img.shields.io/badge/Security%20Audit-Passed-brightgreen.svg)](SECURITY_AUDIT.md)
+[![pub package](https://img.shields.io/pub/v/rspl_secure_vault.svg)](https://pub.dev/packages/rspl_secure_vault) [![License: Rishabh Software](https://img.shields.io/badge/License-Rishabh%20Software-blue.svg)](LICENSE) [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/rishabhsoftwarepvtltd/FlutterSecureVault) [![Flutter](https://img.shields.io/badge/Flutter-3.3.0%2B-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev) [![Dart](https://img.shields.io/badge/Dart-3.0.0%2B-0175C2.svg?logo=dart&logoColor=white)](https://dart.dev) [![Platform](https://img.shields.io/badge/platform-android%20|%20ios-blue.svg)](https://github.com/rishabhsoftwarepvtltd/FlutterSecureVault) [![Security Audit](https://img.shields.io/badge/Security%20Audit-Passed-brightgreen.svg)](SECURITY_AUDIT.md)
 
 This is a **secure-by-default** Flutter plugin for storing sensitive data. It provides automatic encryption using envelope encryption with platform-specific hardware-backed key management (iOS Secure Enclave/Keychain and Android Keystore).
 
@@ -728,7 +728,7 @@ rspl_secure_vault/
 
 ## Example
 
-For a complete working example, see the [example app on GitHub](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault/tree/main/example).
+For a complete working example, see the [example app on GitHub](https://github.com/rishabhsoftwarepvtltd/FlutterSecureVault/tree/main/example).
 
 ## Acknowledgments
 

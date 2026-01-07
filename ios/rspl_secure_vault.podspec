@@ -4,14 +4,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'rspl_secure_vault'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Secure encryption plugin using envelope encryption with iOS Secure Enclave/Keychain.'
   s.description      = <<-DESC
 A Flutter plugin that provides secure encryption and decryption capabilities using envelope encryption.
 Uses AES-GCM for data encryption, ECDH for key agreement, and leverages iOS Secure Enclave and Keychain
 for hardware-backed key protection.
                        DESC
-  s.homepage         = 'https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault'
+  s.homepage         = 'https://github.com/rishabhsoftwarepvtltd/FlutterSecureVault'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'RSPL' => 'contact@rspl.com' }
   s.source           = { :path => '.' }
