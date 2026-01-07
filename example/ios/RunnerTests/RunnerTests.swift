@@ -9,7 +9,7 @@ import XCTest
 /// Run these tests from Xcode or via: flutter test integration_test
 class RunnerTests: XCTestCase {
 
-    private let testKeyTag = "com.rspl.secure_vault.test"
+    private let testKeyTag = "com.rishabhsoft.rspl_secure_vault.test"
     
     override func setUp() {
         super.setUp()
