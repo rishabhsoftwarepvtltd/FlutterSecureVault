@@ -7,6 +7,7 @@ version: 0.0.1
 homepage: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault
 repository: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault
 issue_tracker: https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault/issues
+license: LicenseRef-Rishabh-Software-Non-Commercial-1.0
 
 topics:
   - encryption

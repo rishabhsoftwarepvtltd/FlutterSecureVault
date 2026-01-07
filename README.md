@@ -1,6 +1,6 @@
 # Secure Vault
 
-[![pub package](https://img.shields.io/pub/v/rspl_secure_vault.svg)](https://pub.dev/packages/rspl_secure_vault) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Flutter](https://img.shields.io/badge/Flutter-3.3.0%2B-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev) [![Dart](https://img.shields.io/badge/Dart-3.0.0%2B-0175C2.svg?logo=dart&logoColor=white)](https://dart.dev) [![Platform](https://img.shields.io/badge/platform-android%20|%20ios-blue.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Security Audit](https://img.shields.io/badge/Security%20Audit-Passed-brightgreen.svg)](SECURITY_AUDIT.md)
+[![pub package](https://img.shields.io/pub/v/rspl_secure_vault.svg)](https://pub.dev/packages/rspl_secure_vault) [![License: Rishabh Software](https://img.shields.io/badge/License-Rishabh%20Software-blue.svg)](LICENSE) [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Flutter](https://img.shields.io/badge/Flutter-3.3.0%2B-02569B.svg?logo=flutter&logoColor=white)](https://flutter.dev) [![Dart](https://img.shields.io/badge/Dart-3.0.0%2B-0175C2.svg?logo=dart&logoColor=white)](https://dart.dev) [![Platform](https://img.shields.io/badge/platform-android%20|%20ios-blue.svg)](https://github.com/rishabhsoftwarepvtltd/rspl_secure_vault) [![Security Audit](https://img.shields.io/badge/Security%20Audit-Passed-brightgreen.svg)](SECURITY_AUDIT.md)
 
 This is a **secure-by-default** Flutter plugin for storing sensitive data. It provides automatic encryption using envelope encryption with platform-specific hardware-backed key management (iOS Secure Enclave/Keychain and Android Keystore).
 
@@ -751,9 +751,7 @@ Run checks before push:
 
 ## User Privacy Notes
 
-- This package does not collect any user information or share data with third-party services
-- No analytics or telemetry of any kind
-- All data remains on the user's device
+- This package does not collect any user information or share data with third-party services.
 
 ## Author, Maintainers & Acknowledgements
 
@@ -762,10 +760,22 @@ Run checks before push:
 
 ## License
 
-This package is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This package is licensed under the **Rishabh Software Source Available License (Non-Commercial) V.1**.
 
----
+- ✅ Free for personal projects, learning, academic purposes, and evaluation
+- ✅ You may modify and fork for non-commercial use
+- ❌ Commercial use requires a separate license
 
-## Made by RSPL Team
+For licensing inquiries, refer to [LICENSE](LICENSE) for contact details.
+
+## Made by Rishabh Software Team
 
 [Github](https://github.com/rishabhsoftwarepvtltd) • [Website](https://www.rishabhsoft.com/services/mobile-app-development)
+
+## Contact
+
+Have questions, suggestions, or feedback? We'd love to hear from you!
+
+📧 **Email**: [opensource@rishabhsoft.com](mailto:opensource@rishabhsoft.com)
+
+🌐 **Contact Us**: https://www.rishabhsoft.com/contact-us
