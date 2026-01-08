@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'rspl_secure_vault'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'Secure encryption plugin using envelope encryption with iOS Secure Enclave/Keychain.'
   s.description      = <<-DESC
 A Flutter plugin that provides secure encryption and decryption capabilities using envelope encryption.

@@ -1,102 +1,139 @@
-# Rishabh Software Source Available License (Non-Commercial) v1.0
+Rishabh Software Source Available License (Non-Commercial) v1.0
 
----
+================================================================================
 
-## Definitions
+DEFINITIONS
 
 For the purposes of this License:
 
-- **“Software”** means the source code, object code, documentation, examples, and any other materials made available in this repository/package.
-- **“Licensor”** means **Rishabh Software Private Limited**.
-- **“You”** or **“Licensee”** means any individual or entity exercising permissions under this License.
-- **“Non-Commercial Use”** means use solely for personal projects, learning, academic purposes, evaluation, experimentation, or internal proof-of-concept activities that do not generate revenue or provide commercial advantage.
-- **“Commercial Use”** means any use of the Software, directly or indirectly, for monetary gain, commercial advantage, or in connection with any paid product, service, or offering.
+- "Software" means the source code, object code, documentation, examples, and
+  any other materials made available in this repository/package.
 
----
+- "Licensor" means Rishabh Software Private Limited.
 
-## Grant of License
+- "You" or "Licensee" means any individual or entity exercising permissions
+  under this License.
 
-Subject to the terms and conditions of this License, the Licensor hereby grants You a non-exclusive, non-transferable, revocable, royalty-free license to:
+- "Non-Commercial Use" means use solely for personal projects, learning,
+  academic purposes, evaluation, experimentation, or internal proof-of-concept
+  activities that do not generate revenue or provide commercial advantage.
 
-- download, install, and use the Software for **Non-Commercial Use**;
-- modify the Software for **Non-Commercial Use**;
-- fork and distribute the Software or Your modifications solely for **Non-Commercial Use**.
+- "Commercial Use" means any use of the Software, directly or indirectly, for
+  monetary gain, commercial advantage, or in connection with any paid product,
+  service, or offering.
 
----
+================================================================================
 
-## Attribution and Notice Requirements
+GRANT OF LICENSE
+
+Subject to the terms and conditions of this License, the Licensor hereby grants
+You a non-exclusive, non-transferable, revocable, royalty-free license to:
+
+- download, install, and use the Software for Non-Commercial Use;
+- modify the Software for Non-Commercial Use;
+- fork and distribute the Software or Your modifications solely for
+  Non-Commercial Use.
+
+================================================================================
+
+ATTRIBUTION AND NOTICE REQUIREMENTS
 
 You will do the following at all times:
 
-- retain all copyright notices, license text, and disclaimers in all copies or substantial portions of the Software;
-- provide clear attribution to **Rishabh Software Pvt. Ltd.** in any documentation, repository description, or materials accompanying the use or distribution of the Software;
-- not remove, obscure, or replace any attribution, branding, or ownership references contained in the Software.
+- retain all copyright notices, license text, and disclaimers in all copies or
+  substantial portions of the Software;
 
----
+- provide clear attribution to Rishabh Software Pvt. Ltd. in any documentation,
+  repository description, or materials accompanying the use or distribution of
+  the Software;
 
-## Restrictions
+- not remove, obscure, or replace any attribution, branding, or ownership
+  references contained in the Software.
+
+================================================================================
+
+RESTRICTIONS
 
 Unless authorized by the Licensor in writing, you will not:
 
-- use the Software for **Commercial Use**;
-- bundle, resell, sublicense, lease, or distribute the Software as part of any paid product, SaaS platform, hosted service, or client deliverable;
-- integrate the Software into any system or service offered to third parties for a fee or other commercial benefit;
+- use the Software for Commercial Use;
+
+- bundle, resell, sublicense, lease, or distribute the Software as part of any
+  paid product, SaaS platform, hosted service, or client deliverable;
+
+- integrate the Software into any system or service offered to third parties
+  for a fee or other commercial benefit;
+
 - claim ownership, exclusive rights, or authorship over the Software;
+
 - represent the Software as open-source under any OSI-approved license.
 
----
+================================================================================
 
-## Commercial Licensing
+COMMERCIAL LICENSING
 
-Commercial usage of this Software is strictly prohibited under this License.  
-If you wish to obtain the Software for commercial use, you must obtain a separate written commercial license from the Licensor.
+Commercial usage of this Software is strictly prohibited under this License.
+If you wish to obtain the Software for commercial use, you must obtain a
+separate written commercial license from the Licensor.
 
-Requests for commercial licensing may be directed to:  
-**opensource_techsupport@rishabhsoft.com**
+Requests for commercial licensing may be directed to:
+opensource_techsupport@rishabhsoft.com
 
----
+================================================================================
 
-## Intellectual Property
+INTELLECTUAL PROPERTY
 
-This Software is licensed and not sold. All right, title, and interest in the Software remains with the Licensor.  
-No rights are granted to You except as expressly stated in this License.
+This Software is licensed and not sold. All right, title, and interest in the
+Software remains with the Licensor. No rights are granted to You except as
+expressly stated in this License.
 
----
+================================================================================
 
-## Termination
+TERMINATION
 
-This License shall automatically terminate without notice if You breach any of its terms.  
-Upon termination, You will cease all use of the Software immediately.
+This License shall automatically terminate without notice if You breach any of
+its terms. Upon termination, You will cease all use of the Software immediately.
 
----
+================================================================================
 
-## Disclaimer of Warranty
+DISCLAIMER OF WARRANTY
 
-THE SOFTWARE IS PROVIDED **“AS IS”**, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY.
 
----
+================================================================================
 
-## Limitation of Liability
+LIMITATION OF LIABILITY
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY
+TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-THE LIABILITY OF THE LICENSOR SHALL NOT EXCEED **0 (ZERO) USD**.
+THE LIABILITY OF THE LICENSOR SHALL NOT EXCEED 0 (ZERO) USD.
 
----
+================================================================================
 
-## Governing Law
+GOVERNING LAW
 
-This License shall be governed by the laws of the **Union of India**.  
-The courts at **Vadodara** shall have exclusive jurisdiction for any disputes arising out of this License.
+This License shall be governed by the laws of the Union of India.
+The courts at Vadodara shall have exclusive jurisdiction for any disputes
+arising out of this License.
 
----
+================================================================================
 
-## Miscellaneous
+MISCELLANEOUS
 
-- This License contains the entire agreement between the parties concerning the Software.
-- If any provision of this License is held to be unenforceable, the remaining provisions shall remain in full force and effect.
-- Failure by the Licensor to enforce any provision shall not constitute a waiver of future enforcement.
+- This License contains the entire agreement between the parties concerning
+  the Software.
 
----
+- If any provision of this License is held to be unenforceable, the remaining
+  provisions shall remain in full force and effect.
 
-**END OF LICENSE**
+- Failure by the Licensor to enforce any provision shall not constitute a
+  waiver of future enforcement.
+
+================================================================================
+
+END OF LICENSE
